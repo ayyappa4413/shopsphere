@@ -1,0 +1,418 @@
+
+.footer {
+  position: relative;
+  margin-top: auto;
+  width: 100%;
+  background: #071a33;
+  color: #ffffff;
+  border-top: 1px solid #12345a;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   TOP ACCENT LINE
+========================================================= */
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 420px;
+  height: 2px;
+  transform: translateX(-50%);
+  background: #2563eb;
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+}
+
+/* =========================================================
+   MAIN FOOTER & CONTAINER
+========================================================= */
+
+.footer-main {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+  padding: 4.5rem 24px 3.5rem;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.35fr;
+  gap: 3rem;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   COLUMNS
+========================================================= */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.footer-column h3 {
+  margin: 0 0 1.3rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+/* =========================================================
+   BRAND COLUMN
+========================================================= */
+
+.footer-brand {
+  max-width: 380px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0 0 1.15rem;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 1.55rem;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  cursor: pointer;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-logo:hover {
+  color: #60a5fa;
+  transform: translateY(-1px);
+}
+
+.footer-logo-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 6px 16px rgba(37, 99, 235, 0.25);
+}
+.footer-description {
+  margin: 0 0 1.5rem;
+  color: #9fb3cc;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* Trust Badge */
+.footer-trust {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid #163b68;
+  border-radius: 11px;
+  background: #0b2342;
+  color: #60a5fa;
+}
+
+.footer-trust > div strong {
+  display: block;
+  margin-bottom: 2px;
+  color: #eaf2ff;
+  font-size: 0.76rem;
+  font-weight: 750;
+}
+
+.footer-trust > div span {
+  display: block;
+  color: #7791b0;
+  font-size: 0.68rem;
+}
+
+/* =========================================================
+   LISTS & LINKS (DEPARTMENTS / CUSTOMER SERVICE)
+========================================================= */
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.footer-links li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #9fb3cc;
+  font-size: 0.84rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-links li a svg {
+  flex-shrink: 0;
+  color: #5f87b4;
+  opacity: 0.8;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-links li a:hover {
+  color: #60a5fa;
+  transform: translateX(3px);
+}
+
+.footer-links li a:hover svg {
+  color: #60a5fa;
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.footer-newsletter {
+  max-width: 420px;
+}
+
+.footer-newsletter p {
+  margin: 0 0 1.25rem;
+  color: #9fb3cc;
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.newsletter-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.6rem;
+}
+
+.newsletter-input-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.85rem;
+  border: 1px solid #1b416e;
+  border-radius: 9px;
+  background: #0a2240;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.newsletter-input-wrapper svg {
+  flex-shrink: 0;
+  color: #628bb8;
+  margin-right: 0.55rem;
+}
+
+.newsletter-input-wrapper input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent !important;
+  color: #ffffff !important;
+  font-family: inherit;
+  font-size: 0.82rem;
+}
+
+.newsletter-input-wrapper input::placeholder {
+  color: #6683a5;
+}
+
+/* Prevent Autofill from turning background white */
+.newsletter-input-wrapper input:-webkit-autofill,
+.newsletter-input-wrapper input:-webkit-autofill:hover, 
+.newsletter-input-wrapper input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0px 1000px #0a2240 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.newsletter-input-wrapper:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.newsletter-form button {
+  flex-shrink: 0;
+  height: 44px;
+  padding: 0 1.15rem;
+  border: 1px solid #2563eb;
+  border-radius: 9px;
+  background: #2563eb;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 750;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.newsletter-form button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+}
+
+.newsletter-form button:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.footer-newsletter small {
+  display: block;
+  color: #5f7898;
+  font-size: 0.72rem;
+}
+
+/* =========================================================
+   BOTTOM FOOTER
+========================================================= */
+
+.footer-bottom {
+  border-top: 1px solid #12345a;
+  background: #051529;
+  width: 100%;
+}
+
+.footer-bottom-container {
+  width: min(1400px, 100%);
+  min-height: 64px;
+  margin: 0 auto;
+  padding: 1rem 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  box-sizing: border-box;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #607b9b;
+  font-size: 0.76rem;
+}
+
+.footer-payment-info {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer-payment-info span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #6f89a7;
+  font-size: 0.74rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 1050px) {
+  .footer-container {
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-newsletter {
+    grid-column: 1 / -1;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 3.5rem 20px 2.5rem;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: 100%;
+  }
+
+  .footer-newsletter {
+    grid-column: 1 / -1;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 2.75rem 16px 2rem;
+    gap: 2rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+
+  .newsletter-input-wrapper {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  .footer-bottom-container {
+    padding: 1.25rem 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .footer-payment-info {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+  }
+}

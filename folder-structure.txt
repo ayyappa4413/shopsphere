@@ -1,0 +1,72 @@
+shopsphere/
+|-- eslint.config.js
+|-- index.html
+|-- package.json
+|-- README.md
+|-- vite.config.js
+|-- public/
+|-- src/
+    |-- App.css
+    |-- App.jsx
+    |-- index.css
+    |-- main.jsx
+    |-- assets/
+    |-- components/
+        |-- common/
+            |-- Footer.jsx
+            |-- MobileDrawer.jsx
+            |-- Navbar.jsx
+            |-- ProductCard.jsx
+            |-- ToastContainer.jsx
+        |-- modals/
+            |-- AuthModal.jsx
+            |-- ProductEditModal.jsx
+            |-- QuickViewModal.jsx
+    |-- context/
+        |-- AppContext.jsx
+    |-- data/
+        |-- coupons.js
+        |-- initialProducts.js
+    |-- pages/
+        |-- AdminPage.jsx
+        |-- CartPage.jsx
+        |-- CheckoutPage.jsx
+        |-- DoorstepReturns.jsx
+        |-- HomePage.jsx
+        |-- OrdersPage.jsx
+        |-- ProductDetailPage.jsx
+        |-- ProfilePage.jsx
+        |-- ShopPage.jsx
+        |-- TermsConditions.jsx
+        |-- Warranty.jsx
+        |-- WishlistPage.jsx
+    |-- redux/
+        |-- store.js
+        |-- slices/
+    |-- routes/
+    |-- services/
+    |-- styles/
+        |-- admin.css
+        |-- buttons.css
+        |-- cart.css
+        |-- checkout.css
+        |-- footer.css
+        |-- global.css
+        |-- home.css
+        |-- mobile-drawer.css
+        |-- modals.css
+        |-- navbar.css
+        |-- orders.css
+        |-- policy-page.css
+        |-- product-detail.css
+        |-- productcard.css
+        |-- profile.css
+        |-- responsive.css
+        |-- shop.css
+        |-- toast.css
+        |-- Untitled-1.css
+        |-- variable.css
+        |-- wishlist.css
+    |-- utils/
+        |-- formatters.js
+        |-- storage.js

@@ -1,0 +1,609 @@
+/* =========================================
+   SHOPSPHERE - ORDERS PAGE
+   Blue-only design system
+   ========================================= */
+
+.container.orders-page {
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+  padding-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+/* =========================================
+   PAGE HEADER
+   ========================================= */
+
+.orders-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.orders-eyebrow {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #2563eb;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.orders-page-header h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.orders-page-header p {
+  margin: 0.5rem 0 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.orders-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 38px;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================================
+   ORDERS LAYOUT
+   ========================================= */
+
+.orders-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(280px, 1.1fr)
+    minmax(340px, 0.9fr);
+  align-items: start;
+  gap: 1.5rem;
+}
+
+/* =========================================
+   ORDERS LIST
+   ========================================= */
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+/* =========================================
+   ORDER CARD
+   ========================================= */
+
+.order-card {
+  width: 100%;
+  padding: 1.25rem;
+
+  background: #ffffff;
+
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 14px rgba(37, 99, 235, 0.06);
+
+  cursor: pointer;
+
+  text-align: left;
+  font: inherit;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #93c5fd;
+
+  box-shadow:
+    0 10px 24px rgba(37, 99, 235, 0.1);
+}
+
+.order-card:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.2);
+  outline-offset: 2px;
+}
+
+.order-card.selected {
+  border-color: #2563eb;
+
+  background: #f8fbff;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1),
+    0 8px 20px rgba(37, 99, 235, 0.08);
+}
+
+/* Order ID */
+
+.order-card > div:first-child span:first-child {
+  color: #071a33;
+}
+
+/* =========================================
+   STATUS PILL
+   Blue-only statuses
+   ========================================= */
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 28px;
+
+  padding: 0.3rem 0.7rem;
+
+  border-radius: 999px;
+
+  border: 1px solid #bfdbfe;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+
+  white-space: nowrap;
+}
+
+/* Delivered */
+
+.status-delivered {
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-color: #93c5fd;
+}
+
+/* Shipped */
+
+.status-shipped {
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #bfdbfe;
+}
+
+/* Processing */
+
+.status-processing {
+  background: #e0f2fe;
+  color: #0369a1;
+  border-color: #7dd3fc;
+}
+
+/* Confirmed */
+
+.status-confirmed {
+  background: #eef6ff;
+  color: #1e40af;
+  border-color: #bfdbfe;
+}
+
+/* Out for Delivery */
+
+.status-out-for-delivery {
+  background: #e0f2fe;
+  color: #075985;
+  border-color: #7dd3fc;
+}
+
+/* Cancelled */
+
+.status-cancelled {
+  background: #e8f0ff;
+  color: #1e3a8a;
+  border-color: #93c5fd;
+}
+
+/* =========================================
+   TRACKING CARD
+   ========================================= */
+
+.tracking-card {
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+
+  background: #ffffff;
+
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+
+  box-shadow:
+    0 5px 18px rgba(37, 99, 235, 0.07);
+
+  position: sticky;
+  top: 6rem;
+}
+
+.tracking-card > h3 {
+  margin-bottom: 0.5rem;
+
+  font-size: 1.25rem;
+  font-weight: 800;
+
+  color: #0f172a;
+}
+
+.tracking-card > p {
+  margin-bottom: 1.5rem;
+
+  color: #64748b;
+
+  font-size: 0.85rem;
+}
+
+/* =========================================
+   TIMELINE
+   ========================================= */
+
+.timeline-container {
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+
+  margin: 2rem 0;
+
+  padding: 0 0.25rem;
+}
+
+/* Background track */
+
+.timeline-track {
+  position: absolute;
+
+  top: 18px;
+  left: 30px;
+  right: 30px;
+
+  height: 3px;
+
+  background: #dbeafe;
+
+  border-radius: 999px;
+
+  z-index: 1;
+}
+
+/* Completed progress */
+
+.timeline-progress {
+  position: absolute;
+
+  top: 18px;
+  left: 30px;
+
+  height: 3px;
+
+  background: #2563eb;
+
+  border-radius: 999px;
+
+  z-index: 2;
+
+  transition: width 0.5s ease;
+}
+
+/* Timeline step */
+
+.timeline-step {
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  min-width: 60px;
+}
+
+/* Timeline node */
+
+.timeline-node {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  border: 2px solid #bfdbfe;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  color: #64748b;
+
+  box-shadow:
+    0 3px 10px rgba(37, 99, 235, 0.06);
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Completed node */
+
+.timeline-node.done {
+  background: #2563eb;
+
+  border-color: #2563eb;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 5px 14px rgba(37, 99, 235, 0.22);
+}
+
+/* Hover */
+
+.timeline-step:hover .timeline-node {
+  transform: translateY(-2px);
+}
+
+/* Timeline label */
+
+.timeline-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  color: #64748b;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+.timeline-node.done + .timeline-label {
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+/* =========================================
+   ORDER DETAILS
+   ========================================= */
+
+.tracking-card hr {
+  border: 0;
+
+  border-top:
+    1px solid #dbeafe;
+
+  margin: 1.5rem 0;
+}
+
+/* Product image */
+
+.tracking-card img {
+  width: 40px;
+  height: 40px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  border: 1px solid #dbeafe;
+
+  background: #eff6ff;
+}
+
+/* =========================================
+   EMPTY ORDERS STATE
+   ========================================= */
+
+.orders-empty {
+  min-height: 60vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding:
+    3rem 1rem;
+}
+
+/* Empty icon */
+
+.orders-empty-icon {
+  width: 96px;
+  height: 96px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 1.5rem;
+
+  border-radius: 50%;
+
+  background: #eff6ff;
+
+  border: 1px solid #bfdbfe;
+
+  color: #2563eb;
+
+  box-shadow:
+    0 10px 30px rgba(37, 99, 235, 0.1);
+}
+
+/* Empty heading */
+
+.orders-empty h2 {
+  margin: 0 0 0.75rem;
+
+  color: #0f172a;
+
+  font-size:
+    clamp(1.35rem, 3vw, 1.75rem);
+
+  font-weight: 800;
+}
+
+/* Empty description */
+
+.orders-empty p {
+  max-width: 520px;
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+}
+
+/* Empty button */
+
+.orders-empty .btn {
+  min-height: 44px;
+
+  border-radius: 10px;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+   ========================================= */
+
+@media (max-width: 960px) {
+  .orders-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tracking-card {
+    position: static;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+  .container.orders-page {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .orders-page-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 1rem;
+  }
+
+  .orders-count {
+    align-self: flex-start;
+  }
+
+  .order-card {
+    padding: 1rem;
+  }
+
+  .tracking-card {
+    padding: 1rem;
+  }
+
+  .orders-page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .orders-page-header p {
+    font-size: 0.85rem;
+  }
+
+  .orders-empty {
+    min-height: 55vh;
+  }
+
+  .orders-empty-icon {
+    width: 82px;
+    height: 82px;
+  }
+
+  .orders-empty-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 520px) {
+  .tracking-card {
+    overflow-x: auto;
+  }
+
+  .timeline-container {
+    min-width: 500px;
+  }
+
+  .order-card {
+    border-radius: 12px;
+  }
+
+  .status-pill {
+    font-size: 0.68rem;
+
+    padding:
+      0.25rem 0.6rem;
+  }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 380px) {
+  .timeline-container {
+    min-width: 460px;
+  }
+
+  .timeline-label {
+    font-size: 0.7rem;
+  }
+
+  .orders-empty h2 {
+    font-size: 1.3rem;
+  }
+
+  .orders-empty p {
+    font-size: 0.82rem;
+  }
+}

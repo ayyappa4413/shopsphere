@@ -1,0 +1,306 @@
+
+/* =========================================
+   ShopSphere Policy Pages
+========================================= */
+
+.policy-page {
+  min-height: 100vh;
+  background: #f7f8fa;
+  padding: 40px 20px 80px;
+}
+
+.policy-container {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+}
+
+/* =========================================
+   Back Button
+========================================= */
+
+.policy-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  border: none;
+  background: transparent;
+
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 8px 0;
+  margin-bottom: 35px;
+
+  transition: color 0.2s ease;
+}
+
+.policy-back-button:hover {
+  color: #111;
+}
+
+/* =========================================
+   Header
+========================================= */
+
+.policy-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.policy-icon {
+  width: 68px;
+  height: 68px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #111;
+  color: #fff;
+}
+
+.policy-label {
+  display: inline-block;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: #777;
+
+  margin-bottom: 12px;
+}
+
+.policy-header h1 {
+  margin: 0 0 14px;
+
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.1;
+
+  color: #111;
+  font-weight: 800;
+}
+
+.policy-header > p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #666;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   Policy Cards
+========================================= */
+
+.policy-card {
+  background: #fff;
+
+  border: 1px solid #e8e8e8;
+  border-radius: 18px;
+
+  padding: 30px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.policy-card h2 {
+  margin: 0 0 15px;
+
+  color: #111;
+
+  font-size: 22px;
+  font-weight: 750;
+}
+
+.policy-card p {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* =========================================
+   Feature Section
+========================================= */
+
+.policy-features {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-top: 25px;
+}
+
+.policy-feature {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 14px;
+}
+
+.policy-feature > svg {
+  flex-shrink: 0;
+
+  color: #111;
+
+  margin-top: 3px;
+}
+
+.policy-feature h3 {
+  margin: 0 0 6px;
+
+  font-size: 16px;
+
+  color: #111;
+}
+
+.policy-feature p {
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   Lists
+========================================= */
+
+.policy-list {
+  margin: 0;
+
+  padding-left: 22px;
+
+  color: #666;
+}
+
+.policy-list li {
+  margin-bottom: 12px;
+
+  padding-left: 5px;
+
+  line-height: 1.6;
+}
+
+.policy-numbered-list {
+  padding-left: 25px;
+}
+
+/* =========================================
+   Terms & Conditions Section Heading
+========================================= */
+
+.policy-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.policy-section-heading h2 {
+  margin: 0;
+}
+
+.policy-section-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #f1f2f4;
+  color: #111;
+}
+
+.policy-info-card {
+  background: #fafafa;
+}
+
+@media (max-width: 480px) {
+  .policy-section-heading {
+    align-items: flex-start;
+  }
+
+  .policy-section-heading h2 {
+    font-size: 19px;
+  }
+
+  .policy-section-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 768px) {
+  .policy-page {
+    padding: 25px 15px 60px;
+  }
+
+  .policy-header {
+    margin-bottom: 30px;
+  }
+
+  .policy-card {
+    padding: 22px;
+  }
+
+  .policy-features {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-header h1 {
+    font-size: 34px;
+  }
+}
+
+/* =========================================
+   Small Mobile
+========================================= */
+
+@media (max-width: 480px) {
+  .policy-page {
+    padding: 20px 12px 50px;
+  }
+
+  .policy-card {
+    border-radius: 14px;
+
+    padding: 18px;
+  }
+
+  .policy-header h1 {
+    font-size: 30px;
+  }
+
+  .policy-header > p {
+    font-size: 14px;
+  }
+}
+
+

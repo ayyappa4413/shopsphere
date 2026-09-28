@@ -1,0 +1,818 @@
+
+/* =========================================================
+   SHOPSPHERE NAVBAR
+   BLUE DESIGN SYSTEM
+========================================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border-bottom: 1px solid #dbeafe;
+
+  box-shadow:
+    0 4px 18px rgba(7, 26, 51, 0.06);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.navbar-container {
+  width: min(1400px, 94%);
+
+  min-height: 72px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-logo {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #0f172a;
+
+  font-family: inherit;
+
+  font-size: 1.35rem;
+
+  font-weight: 850;
+
+  letter-spacing: -0.04em;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.navbar-logo:hover {
+  color: #2563eb;
+
+  transform: translateY(-1px);
+}
+
+
+.navbar-logo-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  color: #ffffff;
+
+  font-size: 0.95rem;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+
+.navbar-logo-text {
+  color: #0f172a;
+
+  transition: color 0.2s ease;
+}
+
+
+.navbar-logo:hover .navbar-logo-text {
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2px;
+
+  flex-shrink: 0;
+}
+
+
+.navbar-links button {
+  position: relative;
+
+  border: none;
+
+  background: transparent;
+
+  padding: 9px 10px;
+
+  border-radius: 8px;
+
+  color: #64748b;
+
+  font-family: inherit;
+
+  font-size: 0.82rem;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.navbar-links button:hover {
+  color: #2563eb;
+
+  background: #eff6ff;
+}
+
+
+.navbar-links button.active {
+  color: #1d4ed8;
+}
+
+
+.navbar-links button.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 10px;
+  right: 10px;
+
+  bottom: 2px;
+
+  height: 2px;
+
+  border-radius: 99px;
+
+  background: #2563eb;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.navbar-search {
+  position: relative;
+
+  flex: 1;
+
+  max-width: 330px;
+
+  min-width: 150px;
+
+  margin-left: auto;
+}
+
+
+.navbar-search input {
+  width: 100%;
+
+  height: 41px;
+
+  padding: 0 14px 0 42px;
+
+  border: 1px solid #bfdbfe;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #f8fbff;
+
+  color: #0f172a;
+
+  font-family: inherit;
+
+  font-size: 0.82rem;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.navbar-search input::placeholder {
+  color: #94a3b8;
+}
+
+
+.navbar-search input:hover {
+  border-color: #93c5fd;
+
+  background: #ffffff;
+}
+
+
+.navbar-search input:focus {
+  border-color: #2563eb;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+.navbar-search-icon {
+  position: absolute;
+
+  left: 14px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #64748b;
+
+  pointer-events: none;
+
+  transition: color 0.2s ease;
+}
+
+
+.navbar-search:focus-within .navbar-search-icon {
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.navbar-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ICON BUTTON
+========================================================= */
+
+.navbar-icon-btn {
+  position: relative;
+
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid transparent;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.navbar-icon-btn:hover {
+  color: #2563eb;
+
+  background: #eff6ff;
+
+  border-color: #dbeafe;
+
+  transform: translateY(-1px);
+}
+
+
+.navbar-icon-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge-wrapper {
+  position: relative;
+}
+
+
+.navbar-badge {
+  position: absolute;
+
+  top: -4px;
+  right: -4px;
+
+  min-width: 17px;
+  height: 17px;
+
+  padding: 0 4px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 999px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 0.59rem;
+
+  font-weight: 850;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   SIGN IN
+========================================================= */
+
+.signin-btn {
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 14px;
+
+  border: 1px solid #2563eb;
+
+  border-radius: 9px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 0.8rem;
+
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.signin-btn:hover {
+  background: #1d4ed8;
+
+  border-color: #1d4ed8;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(37, 99, 235, 0.25);
+}
+
+
+.signin-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   USER BUTTON
+========================================================= */
+
+.navbar-user-btn {
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 10px;
+
+  border: 1px solid #bfdbfe;
+
+  border-radius: 9px;
+
+  background: #f8fbff;
+
+  color: #334155;
+
+  font-family: inherit;
+
+  font-size: 0.79rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.navbar-user-btn:hover {
+  background: #eff6ff;
+
+  border-color: #60a5fa;
+
+  color: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+
+.navbar-user-icon {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #dbeafe;
+
+  color: #2563eb;
+}
+
+
+.user-name {
+  max-width: 105px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ADMIN
+========================================================= */
+
+.admin-btn {
+  height: 36px;
+
+  padding: 0 12px;
+
+  border: 1px solid #2563eb;
+
+  border-radius: 8px;
+
+  background: #eff6ff;
+
+  color: #1d4ed8;
+
+  font-family: inherit;
+
+  font-size: 0.75rem;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.admin-btn:hover {
+  background: #2563eb;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 15px rgba(37, 99, 235, 0.22);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu-btn {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid #bfdbfe;
+
+  border-radius: 9px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.mobile-menu-btn:hover {
+  background: #dbeafe;
+
+  border-color: #93c5fd;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.navbar button:focus-visible,
+.navbar input:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.2);
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .navbar-container {
+    gap: 11px;
+  }
+
+
+  .navbar-links button {
+    padding: 8px 7px;
+
+    font-size: 0.77rem;
+  }
+
+
+  .navbar-search {
+    max-width: 250px;
+  }
+
+
+  .user-name {
+    max-width: 75px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .navbar-container {
+    min-height: 66px;
+
+    width: 94%;
+
+    gap: 9px;
+  }
+
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+
+  .navbar-links {
+    display: none;
+  }
+
+
+  .navbar-logo {
+    font-size: 1.2rem;
+  }
+
+
+  .navbar-logo-mark {
+    width: 33px;
+    height: 33px;
+  }
+
+
+  .navbar-search {
+    max-width: none;
+
+    margin-left: auto;
+  }
+
+
+  .navbar-actions {
+    gap: 3px;
+  }
+
+
+  .navbar-icon-btn {
+    width: 37px;
+    height: 37px;
+  }
+
+
+  .signin-btn {
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+  }
+
+
+  .signin-btn span {
+    display: none;
+  }
+
+
+  .navbar-user-btn {
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    justify-content: center;
+  }
+
+
+  .user-name {
+    display: none;
+  }
+
+
+  .admin-btn {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .navbar-container {
+    width: 94%;
+
+    gap: 6px;
+  }
+
+
+  .navbar-search {
+    display: none;
+  }
+
+
+  .navbar-logo {
+    margin-right: auto;
+  }
+
+
+  .navbar-logo-text {
+    font-size: 1.05rem;
+  }
+
+
+  .navbar-logo-mark {
+    width: 31px;
+    height: 31px;
+  }
+
+
+  .mobile-menu-btn,
+  .navbar-icon-btn,
+  .signin-btn,
+  .navbar-user-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .navbar-logo-text {
+    display: none;
+  }
+
+
+  .navbar-actions {
+    gap: 2px;
+  }
+
+
+  .mobile-menu-btn,
+  .navbar-icon-btn,
+  .signin-btn,
+  .navbar-user-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+}
